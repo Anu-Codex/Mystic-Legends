@@ -57,12 +57,10 @@
                 </div>
                 <!-- Auth Buttons -->
                 <!-- 🔹 LOGIN / REGISTER / OTP MODALS -->
-    <div id="authModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[100] hidden opacity-0 transition-opacity duration-300">
-        <div class="bg-dark border border-gray-700 rounded-xl w-full max-w-sm p-8 shadow-2xl relative">
-            <button onclick="closeModal('authModal')" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
-            
-            <h3 id="authTitle" class="text-2xl font-heading font-bold text-white mb-6 uppercase text-center">Login</h3>
-            
+    <div class="hidden md:flex items-center space-x-4" id="auth-nav">
+    <button onclick="openAuthModal('login')" class="text-gray-300 hover:text-white text-sm font-medium transition">Login</button>
+    <button onclick="openAuthModal('register')" class="bg-primary hover:bg-blue-600 text-white px-5 py-2 rounded-md text-sm font-bold transition">Register</button>
+    </div>
             <!-- Default Form (Email/Password) -->
             <form id="authForm" class="space-y-4">
                 <input type="text" id="authUsername" placeholder="Username (For Register only)" class="w-full bg-darker border border-gray-700 rounded px-4 py-3 text-white focus:outline-none focus:border-primary hidden">
